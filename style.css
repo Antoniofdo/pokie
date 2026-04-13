@@ -1,0 +1,301 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base body styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header styles */
+header {
+  background-color: #B61D1D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.pokie {
+  width: 100%;
+  height:auto;
+}
+header h1 {
+  color: white;
+}
+
+
+  nav.navbar a {
+    font-size: 38px;         /* increases font size */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main > section {
+  padding: 40px 20px;
+}
+
+#home {
+  text-align: center;
+}
+
+p{
+  font-size: 18pt;
+  font: bolder;
+  margin: 10%;
+}
+
+.pikachu{
+width: 10%;
+height: 10%;
+}
+
+h1{
+  font-size: 35pt;
+}
+
+h2 {
+  font-size: 60pt;
+  text-align: center;
+  color: #FFD700;
+}
+
+#home img.logo-img {
+  height: 80px;
+  margin: 20px 0;
+}
+
+.yellow-box {
+  background-color: #FFD700;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: auto;
+  margin: 20px auto;
+}
+
+.yellow-box button {
+  background-color: #B61D1D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.yellow-box button:hover {
+  opacity: 0.8;
+}
+
+.yellow-box-small{
+  background-color: #FFD700;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: auto;
+  margin: 40px auto;
+}
+
+.yellow-box-small button {
+  background-color: #B61D1D;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.yellow-box-small button:hover {
+  opacity: 0.8;
+}
+
+
+.red-box {
+  background-color:#B61D1D;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: auto ;
+  margin: 20px auto;
+}
+
+
+
+/* Grid for displaying Pokémon cards */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.poki2{
+  width: 50%;
+  height: 50%;
+
+}
+
+/* Individual Pokémon card */
+.pokemon-card {
+  text-align: center;
+  border: 2px solid #FFD700;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.pokemon-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.pokemon-card button {
+  margin: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #B61D1D;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pokemon-card button:hover {
+  opacity: 0.9;
+}
+
+/* Modal background overlay */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+.modal-content img {
+  width: 150px;
+  height: auto;
+}
+.close-btn {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #B61D1D;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  /* Navigation bar */
+nav {
+    gap: 10px;
+    font-size: 16px;
+  }
+
+  /* Grid for displaying Pokémon cards */
+.pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+/* Hamburger toggle button for mobile */
+.menu-toggle {
+  display: none;
+  background-color: #B61D1D;
+  color: white;
+  font-size: 24px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Mobile nav styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav.navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #B61D1D;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    padding: 10px 0;
+  }
+
+  nav.navbar.show {
+    display: flex;
+  }
+
+  nav.navbar a {
+    padding: 10px 20px;
+    color: white;
+    border-top: 1px solid #fff;
+  }
+
+  nav.navbar a:hover {
+    background-color: #900000;
+  }
+}
+
+
+@media (min-width: 769px) {
+ header {
+    display: flex;
+    flex-direction: column; /* stack logo and navbar vertically */
+    align-items: center;     /* horizontally center both */
+  }
+
+  nav.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 180px;
+  }
+
+  nav.navbar a {
+    font-size: 60pt;
+  }
+}

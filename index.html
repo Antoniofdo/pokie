@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokedox</title>
+  <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>   
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="navbar">
+      <a href="#home">HOME</a>
+      <a href="#pokie">POKIE</a>
+      <a href="#bag">BAG</a>
+    </nav>
+  </header>
+
+
+<main>
+  <!-- Home page Start -->
+  <section id="home" class="page-section">
+    <!-- Hero div -->
+    <div class="hero">
+      <img class="pokie" src="image/poke.webp" alt="Pokémon Logo">
+      <div class="yellow-box">
+        <h1>Welcome to the Pokidox website!</h1>
+        <p>Pokémon (short for Pocket Monsters) is one of the most iconic and successful multimedia franchises in the world...</p>
+        <button onclick="alert('Clicked!')">READ MORE</button>
+      </div>
+      <img src="image/pika button.png" alt="Pikachu" class="pikachu">
+    </div>
+
+    <div class="red-box">
+      <img class="poki2" src="image/pokemon_PNG98.png" alt="Pokémon Side">
+      <div class="yellow-box-small">
+        <p>At its heart, Pokémon is about capturing, training, and battling creatures...</p>
+        <button onclick="alert('Clicked!')">READ MORE</button>
+      </div>
+      <img class="poki2" src="image/461.png" alt="Pokémon Evolution">
+      <div class="yellow-box-small">
+        <p>There are now over 1,000 different Pokémon species, each with their own design, type, and lore.</p>
+        <button onclick="alert('Clicked!')">READ MORE</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pokédex page start -->
+  <section id="pokie" class="page-section">
+    <h2>Pokédex</h2>
+    <div id="pokemon-grid" class="pokemon-grid"></div>
+  </section>
+
+  <!-- Bag page start -->
+  <section id="bag" class="page-section">   
+    <div id="bag-container" class="pokemon-grid"></div>
+  </section>
+</main>
+
+
+  <!-- Modal for Pokémon Details -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div id="modal-details"></div>
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h2 id="modal-name">Pokémon Name</h2>
+      <img id="modal-img" src="" alt="Pokémon" />
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>&copy; 2025 Pokidox. All rights reserved @Antonio.</footer>
+  <script src="script.js"></script>
+</body>
+</html>
